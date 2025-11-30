@@ -87,7 +87,7 @@ const PackageDetail = () => {
   const handleBooking = (e) => {
     e.preventDefault()
     
-    const whatsappNumber = '919876543210'
+    const whatsappNumber = '923032385244'
     const message = `*📦 PACKAGE BOOKING REQUEST - ${pkg.name}* 🌴
 
 *Package Details:*
