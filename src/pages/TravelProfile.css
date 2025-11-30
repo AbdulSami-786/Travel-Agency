@@ -1,0 +1,245 @@
+.travel-profile {
+  padding: 100px 0 50px;
+  min-height: 100vh;
+  background: var(--surface);
+}
+
+.profile-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.profile-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  gap: 3rem;
+}
+
+.profile-form {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
+}
+
+.form-section {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.form-section:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.form-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: var(--surface);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.travel-styles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.style-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  justify-content: center;
+}
+
+.style-option input {
+  display: none;
+}
+
+.style-option span {
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.style-option:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.style-option input:checked + span {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.style-option input:checked ~ span {
+  color: var(--primary);
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.interest-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.interest-option input {
+  display: none;
+}
+
+.interest-option span {
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.interest-option:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.interest-option input:checked + span {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.btn-save-profile {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.btn-save-profile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+.profile-summary {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
+}
+
+.profile-summary h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.summary-card {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary);
+}
+
+.summary-card p {
+  margin-bottom: 0.8rem;
+  color: var(--text-dark);
+}
+
+.summary-card p:last-child {
+  margin-bottom: 0;
+}
+
+.summary-card strong {
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .profile-form {
+    padding: 1.5rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .travel-styles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .interests-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .travel-styles {
+    grid-template-columns: 1fr;
+  }
+  
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
+}
